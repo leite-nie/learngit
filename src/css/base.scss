@@ -1,0 +1,41 @@
+
+
+ul,li{
+    list-style: none;
+
+}
+li{
+    cursor: pointer;
+}
+*{
+    margin: 0;
+    padding: 0;
+}
+header{
+    background: rgba(0,0,0,.3);
+    padding:.2rem  0 ;
+    ul{
+        display: flex;
+        text-align: center;
+        li{
+            width: 33.3333%;
+            &.active{
+                a{
+                    color: red;
+                }
+            }
+        }
+        &.haha{
+            background: rgba(234,130,125,.3);
+        }
+    }
+}
+
+footer{
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    padding: 1rem 0;
+    background-color: beige;
+}
