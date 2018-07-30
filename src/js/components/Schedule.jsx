@@ -31,13 +31,15 @@ class Main extends React.Component{
                     <button onClick={() =>
                         setIncrease({
                             type: 'INCREASE',
-                            payload: 1
+                            payload: 1,
+                            objName : '卡卡22222222'
                         })}>
                         Increase</button>
                     <button onClick={() =>
                         setDecrease({
                             type: 'DECREASE',
-                            payload: 1
+                            payload: 1,
+                            objName : '卡卡111111111'
                         })}>Decrease</button>
 
                 </div>
