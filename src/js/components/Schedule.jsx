@@ -1,18 +1,23 @@
 
-import React from 'react';
-import { connect } from 'react-redux'
+import React ,{Component} from 'react';
+import { connect } from 'react-redux';
+import {withRouter} from 'react-router-dom'
+import PropTypes from "prop-types";
+
+
+
 
 class Main extends React.Component{
+
     constructor(props){
         super(props);
         //console.log(this.props)
     }
-    changeColor(){
-        this.props.changeThsiData(2)
-    }
-    changeColor2(){
 
+    changeColor(){
+        this.props.history.push("/");
     }
+
     render(){
         const { number, setIncrease, setDecrease } = this.props;
         return(
@@ -21,7 +26,7 @@ class Main extends React.Component{
                     <li>6/5 @ Evergreens</li>
                     <li>6/8 vs Kickers</li>
                     <li>6/14 @ United</li>
-                    <li onClick={this.changeColor.bind(this)}>点我改变导航颜色</li>
+                    <li onClick={this.changeColor.bind(this)}>点我跳转组件1Home</li>
 
                 </ul>
                 <div  style={{ marginTop: '1.5em' }}>
@@ -60,7 +65,13 @@ function mapDispatchToProps(dispatch) {
         setDecrease: (state) => dispatch(state)
     }
 }
-export default connect(
+/*export default connect(
     mapStateToProps,
     mapDispatchToProps
-)(Main)
+)(Main)*/
+
+//利用withRouter 跳转路由
+export default withRouter(connect(
+    mapStateToProps,
+    mapDispatchToProps
+)(Main));
