@@ -12,3 +12,4 @@ const Player = (props) => {
             <h2>{player.position}</h2>
         </div>
     )
+}
